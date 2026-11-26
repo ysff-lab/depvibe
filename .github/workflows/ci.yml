@@ -25,4 +25,4 @@ jobs:
       - name: Lint (syntax)
         run: npm run lint
       - name: Offline smoke test
-        run: node bin/depvibe.js check --license MIT --data test/fixtures/health.json || true
+        run: node bin/depvibe.js check --license MIT --data test/fixtures/health.json
