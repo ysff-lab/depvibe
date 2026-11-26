@@ -1,0 +1,46 @@
+{
+  "name": "depvibe",
+  "version": "1.0.0",
+  "description": "Zero-dependency CLI: 'should I depend on this?' — license compatibility + project health in one command.",
+  "type": "module",
+  "bin": {
+    "depvibe": "bin/depvibe.js"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node bin/depvibe.js",
+    "test": "node --test",
+    "lint": "node --check src/index.js && node --check bin/depvibe.js"
+  },
+  "keywords": [
+    "dependency",
+    "license",
+    "compatibility",
+    "health",
+    "maintainability",
+    "cli",
+    "npm",
+    "open-source"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/depvibe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/depvibe/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/depvibe#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}
