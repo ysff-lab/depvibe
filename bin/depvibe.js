@@ -21,6 +21,7 @@ Options:
   --project <id>      your project license (default: MIT)
   --data <file>       path to health JSON file (offline mode)
   --offline           skip network fetch
+  --no-color          disable colored output
   -h, --help          show this help
 
 Examples:
@@ -32,6 +33,7 @@ Examples:
 
 Environment:
   GITHUB_TOKEN   optional, raises GitHub rate limit from 60 to 5000/hr
+  NO_COLOR       if set (non-empty), disable colored output
 `.trim());
   process.exit(0);
 }
@@ -44,6 +46,7 @@ let depLicense = null;
 let projectLicense = "MIT";
 let dataFile = null;
 let offline = false;
+let noColor = false;
 
 for (let i = 0; i < args.length; i++) {
   const a = args[i];
@@ -52,6 +55,7 @@ for (let i = 0; i < args.length; i++) {
   else if (a === "--json") json = true;
   else if (a === "--fail") fail = true;
   else if (a === "--offline") offline = true;
+  else if (a === "--no-color") noColor = true;
   else if (a === "--license") depLicense = args[++i];
   else if (a === "--project") projectLicense = args[++i];
   else if (a === "--data") dataFile = args[++i];
@@ -87,6 +91,7 @@ const opts = {
 };
 
 const data = await runCheck(opts);
+if (noColor) data.useColor = false;
 
 if (json) {
   console.log(formatJson(data));

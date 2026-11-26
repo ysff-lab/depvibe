@@ -2,6 +2,11 @@
 
 All notable changes documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- `--no-color` flag and `NO_COLOR` environment variable support to disable ANSI colors in terminal output.
+
 ## [1.0.0] - 2026-11-26
 
 ### Added

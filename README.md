@@ -45,6 +45,7 @@ depvibe check <package> --json        # machine-readable
 depvibe check <package> --fail        # exit 1 if incompatible or unhealthy
 depvibe check --license MIT --data health.json  # offline mode
 depvibe check <pkg> --offline        # skip network
+depvibe check <pkg> --no-color       # plain output, no ANSI colors
 ```
 
 ### Offline mode
@@ -85,6 +86,7 @@ Supported licenses (12): MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC, GPL-2
 
 ```sh
 GITHUB_TOKEN=ghp_... depvibe check express   # 5000 req/hr instead of 60
+NO_COLOR=1 depvibe check express             # disable colors (https://no-color.org/)
 ```
 
 ## Use in CI
