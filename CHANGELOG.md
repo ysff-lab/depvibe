@@ -18,4 +18,4 @@ All notable changes documented here. Format follows [Keep a Changelog](https://k
 - Zero runtime dependencies. Node.js >= 18.
 - Tests via `node --test`. GitHub Actions CI.
 
-[1.0.0]: https://github.com/YOUR_USERNAME/depvibe/releases/tag/v1.0.0
+[1.0.0]: https://github.com/ysff-lab/depvibe/releases/tag/v1.0.0

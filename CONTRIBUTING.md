@@ -12,7 +12,7 @@ Thanks for helping. The project is zero-dependency and deliberately easy to cont
 ## Setup
 
 ```sh
-git clone https://github.com/YOUR_USERNAME/depvibe.git
+git clone https://github.com/ysff-lab/depvibe.git
 cd depvibe
 node bin/depvibe.js check express   # try it
 npm test                           # run tests

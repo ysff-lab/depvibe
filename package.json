@@ -34,12 +34,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/depvibe.git"
+    "url": "https://github.com/ysff-lab/depvibe.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/depvibe/issues"
+    "url": "https://github.com/ysff-lab/depvibe/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/depvibe#readme",
+  "homepage": "https://github.com/ysff-lab/depvibe#readme",
   "engines": {
     "node": ">=18"
   }
