@@ -1,6 +1,8 @@
 /**
  * Report formatter for depvibe.
  * Terminal output with colors (when TTY), JSON, and CI-friendly.
+ * Colors are disabled by `useColor: false` (the `--no-color` flag) or a
+ * non-empty NO_COLOR environment variable (https://no-color.org/).
  */
 
 const RESET = "\x1b[0m";
@@ -37,11 +39,12 @@ function verdictColor(verdict, useColor) {
  * @param {string} data.version - package version
  * @param {object} data.license - { verdict, reason, normalized }
  * @param {object} data.health - healthVerdict result
- * @param {boolean} [data.useColor=true]
+ * @param {boolean} [data.useColor=true] - false disables ANSI colors
  * @returns {string}
  */
 export function formatReport(data) {
-  const useColor = data.useColor !== false && process.stdout.isTTY;
+  const noColorEnv = Boolean(process.env.NO_COLOR);
+  const useColor = data.useColor !== false && !noColorEnv && Boolean(process.stdout.isTTY);
   const lines = [];
 
   lines.push("");
